@@ -1,0 +1,93 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="name">Product Name</label>
+                        <input type="text"  [(ngModel)]="prodObj.name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="brand">Brand</label>
+                        <input type="text" [(ngModel)]="prodObj.brand" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" [(ngModel)]="prodObj.price" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="frontCamera">Front Camera</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.frontCamera" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="backCamera">Back Camera</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.backCamera" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="processor">Processor</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.processor" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="battery">Battery</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.battery" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="display">Display</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.display" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ram">RAM</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.ram" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="internalMemory">Internal Memory</label>
+                        <input type="text" [(ngModel)]="prodObj.spec.rom" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="imageUrl">Image URL</label>
+                        <input type="text" [(ngModel)]="prodObj.imageUrl" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ProductStatus">Product Status</label>
+                        <select name="" id="" class="form-control" [(ngModel)]="prodObj.isAvailable">
+                            <option value="true">In Stock</option>
+                            <option value="false">Out Of Stock</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p-0">
+                <div class="form-group text-right">
+                    <button
+                    type="button"
+                    class="btn btn-success"
+                    [disabled]="canEdit"
+                    (click)="onUpdate()">UPDATE PRODUCT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

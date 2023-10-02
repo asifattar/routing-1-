@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input
+              type="text"
+              [(ngModel)]="userObj.firstName"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="MiddleName">Middle Name</label>
+            <input
+              type="text"
+              [(ngModel)]="userObj.MiddleName"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="surName">surName</label>
+            <input
+              type="text"
+              [(ngModel)]="userObj.surName"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="nativePlace">NativePlace</label>
+            <input
+              type="text"
+              [(ngModel)]="userObj.nativePlace"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="profession">Profession</label>
+            <input
+              type="text"
+              [(ngModel)]="userObj.profession"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="dateOfBirth">DOB</label>
+            <input type="text" [(ngModel)]="userObj.dateOfBirth" class="form-control" />
+
+            <!-- <input type="text" [(ngModel)]="userObj.dateOfBirth | date : 'yyyy-MM-dd'" class="form-control" /> -->
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group text-right">
+            <button type="button" class="btn btn-success" (click)="onUpdate()">
+              UPDATE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [disabled]="canEdit" -->

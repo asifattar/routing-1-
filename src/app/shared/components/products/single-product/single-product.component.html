@@ -1,0 +1,85 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-5">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              class="img-fluid productImg m-2"
+              [src]="prodObj.imageUrl"
+              [alt]="prodObj.name"
+              [title]="prodObj.name"
+            />
+          </div>
+          <div class="col-md-4">
+            <h5>{{ prodObj.name }}</h5>
+            <span>
+              <span class="mr-3 rating">4.2</span>
+              <span>1232 Ratings & reviews</span>
+            </span>
+            <ul class="p-3 spec">
+              <li>
+                {{ prodObj.spec.ram }} GB RAM | {{ prodObj.spec.rom }} GB ROM
+              </li>
+              <li>{{ prodObj.spec.display }}</li>
+              <li>
+                {{ prodObj.spec.backCamera }} MP +
+                {{ prodObj.spec.frontCamera }}
+              </li>
+              <li>{{ prodObj.spec.battery }}</li>
+              <li>{{ prodObj.spec.processor }}</li>
+              <li>one yeare warranty</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div style="height: 190px" class="col-12">
+                <h3 class="mt-5">{{ prodObj.price | currency }}</h3>
+                <p class="m-0">free delivery by tommaro</p>
+                <p class="m-0">
+                  upto <strong>10 %</strong> off on <br />
+                  exchange
+                </p>
+                <h6 class="text-success">Bank offer</h6>
+                <img
+                  class="assuredImg"
+                  src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+                  alt=""
+                />
+              </div>
+              <div
+                style="height: 190px"
+                class="col-12 d-flex justify-content-center align-items-end py-5"
+              >
+                <button
+                  [disabled]="canEdit"
+                  class="btn btn-success mr-4"
+                  (click)="goToEdite()"
+                >
+                  Edit Product
+                </button>
+                <!-- <button
+                    class="btn btn-success mr-4"
+                    [routerLink]="['/products', prodObj.id , 'edit']"
+                  >
+                    Edit Product
+                  </button> -->
+                <!-- <button class="btn btn-success">Add to Cart</button> -->
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-4 d-flex justify-content-center align-items-center" >
+                          <div class="col-sm-6">
+                          <img class="img-fluid" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="">
+  
+                          </div>
+                          <div class="col-sm-6">
+                              <button class="btn btn-success  mb-2">Buy Now</button>
+                              <button class="btn btn-success">Add to Cart</button>
+                          </div>
+                      </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
