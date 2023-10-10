@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iproduct } from '../../models/iproduct';
 import { ProductsService } from '../../services/products.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -20,5 +21,9 @@ export class ProductsComponent implements OnInit {
     console.log(this.prodArray);
     
   }
+
+
+
+ 
 
 }

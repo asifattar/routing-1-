@@ -2,13 +2,19 @@
   <div class="row">
     <div class="col-md-4">
       <ul class="list-group">
-        <li class="list-group-item"
-        [ngClass]="{'active' : selectedUser === user.id}"
-        [routerLink]="['/users' , user.id]"
-        *ngFor="let user of usersArray">
+        <li
+          class="list-group-item"
+          (click)="selectedUser = user.id"
+          [ngClass]="{ active: selectedUser === user.id }"
+          [routerLink]="['/users', user.id]"
+          *ngFor="let user of usersArray"
+        >
           {{ user.MiddleName }} {{ user.firstName }}
         </li>
       </ul>
+    </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

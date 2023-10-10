@@ -2,10 +2,11 @@
   <div class="col-md-4">
     <ul class="list-group">
       <li
+        (click)="selectedprod = mob.id"
         class="list-group-item"
         [routerLink]="['/products', mob.id]"
         [queryParams]="{canEdit : mob.canReturn}"
-        [ngClass]="{ active: selectedprod === mob.id }"
+        [ngClass]="{ 'active' : selectedprod === mob.id }"
         *ngFor="let mob of prodArray"
       >
         {{ mob.name }}
@@ -13,6 +14,7 @@
     </ul>
   </div>
   <div class="col-md-8">
+    <router-outlet></router-outlet>
     <!-- <app-single-product></app-single-product> -->
   </div>
 </div>

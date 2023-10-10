@@ -20,14 +20,26 @@ export class SingleProductComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this._route.snapshot.params);
-    this.productId = +this._route.snapshot.params['id'];
-    this.prodObj = this._productService.getSelectedMob(this.productId)!;
-    console.log(this.prodObj);
-    this.canEdit = this.prodObj.canReturn;
+
+    this._route.params
+    .subscribe((param : Params) => {
+      this.productId = +param['id'] ; 
+      this.prodObj = this._productService.getSelectedMob(this.productId)!
+      console.log(this.prodObj);
+      this.canEdit = this.prodObj.canReturn;
+      console.log(this.canEdit,'can edit');      
+    })
+
+
+
+    // console.log(this._route.snapshot.params);
+    // this.productId = +this._route.snapshot.params['id'];
+    // this.prodObj = this._productService.getSelectedMob(this.productId)!;
+    // console.log(this.prodObj);
+    // this.canEdit = this.prodObj.canReturn;
 
     
-    console.log('chek can edit',this.canEdit);
+    // console.log('chek can edit',this.canEdit);
     
   }
 
